@@ -7,7 +7,7 @@
   @apply py-2 w-full text-center text-lg font-semibold text-gray-800 border-b-2 border-b-gray-200;
 }
 #mobile-list {
-  @apply flex container justify-center items-center bg-gray-100 absolute top-24 invisible overflow-y-hidden overflow-x-hidden;
+  @apply container mx-auto flex justify-center items-center w-full bg-gray-100 absolute top-24 invisible overflow-y-hidden;
 }
 #mobile-list.active {
   @apply visible overflow-y-auto;
@@ -48,6 +48,9 @@
 .glass-bg {
   background-color: rgba(0, 0, 0, 0.35);
 }
+.glass-bg-white {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 /*link btn components*/
 .btn-pink {
   @apply mb-6 text-white uppercase font-bold py-3 px-6 rounded-md bg-[#f22e7a] hover:bg-[#cd165c];
@@ -82,4 +85,20 @@
 }
 .investment-glass {
   @apply container mx-auto glass-bg py-8 px-4 rounded-md flex flex-col justify-center items-center md:max-w-4xl;
+}
+/*styles for about section*/
+
+/*styles for social article*/
+
+#social {
+  @apply px-8 py-16 bg-[url('../src/images/excited-happy-afro-american-man-looking-laptop-computer.webp')] bg-cover bg-center;
+}
+
+.social-glass {
+  @apply container mx-auto glass-bg-white py-8 px-4 rounded-md flex flex-col justify-start items-start md:max-w-4xl;
+}
+/*styles for contact section*/
+
+.input-field {
+  @apply border-2 border-gray-300 outline-none rounded-md text-lg py-2 px-4 focus:border-sky-600;
 }

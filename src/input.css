@@ -2,16 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/*control styles for menu-mobile, nav list and hamburger animation*/
-.mobile-line {
-  @apply py-2 w-full text-center text-lg font-semibold text-gray-800 border-b-2 border-b-gray-200;
+/*styles for header*/
+.header-wrapper {
+  @apply container mx-auto flex justify-between px-4 py-1 items-center;
 }
+
+/*control styles for menu-mobile, nav list and hamburger animation*/
 #mobile-list {
-  @apply container mx-auto flex justify-center items-center w-full bg-gray-100 absolute top-24 invisible overflow-y-hidden;
+  @apply container flex justify-center items-center w-full bg-gray-100 absolute top-24 invisible overflow-y-hidden lg:visible lg:top-8 lg:bg-transparent;
 }
 #mobile-list.active {
   @apply visible overflow-y-auto;
 }
+
+.mobile-ul {
+  @apply flex flex-col justify-center items-center text-center w-full lg:flex-row lg:justify-center lg:pl-48 xl:justify-end xl:pr-32;
+}
+.mobile-line {
+  @apply py-2 w-full text-center text-lg font-semibold text-gray-800 border-b-2 border-b-gray-200 lg:text-base lg:border-b-transparent lg:w-max;
+}
+
 .link {
   @apply w-full py-1 px-3;
 }
@@ -53,30 +63,32 @@
 }
 /*link btn components*/
 .btn-pink {
-  @apply mb-6 text-white uppercase font-bold py-3 px-6 rounded-md bg-[#f22e7a] hover:bg-[#cd165c];
+  @apply mb-6 w-max text-white uppercase font-bold py-3 px-6 rounded-md bg-[#f22e7a] hover:bg-[#cd165c];
 }
 .btn-sky {
-  @apply mb-6 text-white uppercase font-bold py-3 px-6 rounded-md bg-sky-500 hover:bg-sky-600;
+  @apply mb-6 w-max text-white uppercase font-bold py-3 px-6 rounded-md bg-sky-500 hover:bg-sky-600;
 }
 /*styles for home section*/
-
 #home {
-  @apply bg-[url('../src/images/home.webp')] bg-cover bg-center h-[720px] w-full flex flex-col justify-center mb-20;
+  @apply bg-[url('../src/images/home.webp')] bg-cover bg-center h-[720px] w-full flex justify-center items-center mb-20 md:justify-start;
+}
+.home-glass {
+  @apply container mx-auto glass-bg py-8 px-4 md:max-w-2xl md:mx-8 lg:mx-24;
 }
 
 /* styles for flex-hire section */
 
 #flex-hire {
-  @apply container mx-auto flex flex-col py-4 px-6 mb-20 gap-10 justify-center items-center bg-gray-50;
+  @apply container mx-auto flex flex-col py-4 px-6 mb-20 gap-10 justify-center items-center bg-gray-50 lg:flex-row lg:items-start lg:justify-start;
 }
 .icon-detail {
   @apply w-max py-2 px-2 rounded-full bg-sky-500 flex-shrink-0;
 }
 .title-md {
-  @apply font-semibold text-xl text-black mb-3;
+  @apply font-semibold text-xl text-black mb-3 lg:text-2xl;
 }
 .card {
-  @apply flex items-center gap-3 py-4 px-4 shadow-md bg-white rounded-sm;
+  @apply flex items-center gap-3 py-4 px-4 shadow-md bg-white rounded-sm lg:max-w-6xl;
 }
 /*styles for investment article*/
 
@@ -86,7 +98,23 @@
 .investment-glass {
   @apply container mx-auto glass-bg py-8 px-4 rounded-md flex flex-col justify-center items-center md:max-w-4xl;
 }
+/*styles for training section*/
+
+#training {
+  @apply px-8 py-4 mb-20 container mx-auto flex flex-col justify-center items-center;
+}
+.training-card {
+  @apply border-2 border-gray-100 shadow-md py-6 px-3 lg:max-w-lg h-max;
+}
+
 /*styles for about section*/
+
+#about {
+  @apply bg-sky-50 px-6 py-16;
+}
+.about-wrapper {
+  @apply container mx-auto flex flex-col justify-center items-center gap-8 md:flex-row lg:items-start md:justify-around;
+}
 
 /*styles for social article*/
 
@@ -95,10 +123,25 @@
 }
 
 .social-glass {
-  @apply container mx-auto glass-bg-white py-8 px-4 rounded-md flex flex-col justify-start items-start md:max-w-4xl;
+  @apply container mx-auto glass-bg-white py-8 px-4 rounded-md flex flex-col justify-start items-start md:max-w-lg md:justify-start md:mx-8 lg:mx-24;
 }
 /*styles for contact section*/
 
+.contact-dl {
+  @apply container mx-auto flex flex-col justify-start items-stretch max-w-6xl;
+}
+
+.contact-dt {
+  @apply card mb-4 cursor-pointer w-full flex items-center justify-between;
+}
+
 .input-field {
-  @apply border-2 border-gray-300 outline-none rounded-md text-lg py-2 px-4 focus:border-sky-600;
+  @apply border-2 border-gray-300 outline-none rounded-md text-lg py-2 px-4 focus:border-sky-400;
+}
+.accord-arrow {
+  @apply bg-[url('../src/images/toright_arrow.svg')] bg-cover bg-center w-8 h-8 block;
+  transition: 0.6s;
+}
+.accord-arrow.open {
+  transform: rotate(-270deg);
 }

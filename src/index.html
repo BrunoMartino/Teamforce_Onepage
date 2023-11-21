@@ -10,17 +10,17 @@
 </head>
 
 <body>
-  <header class="bg-[#e9e9e9] relative">
-    <div class="container mx-auto flex justify-between px-4 py-1 items-center ">
+  <header class="bg-[#e9e9e9] flex justify-center relative">
+    <div class="header-wrapper">
       <a href="#home"><img class="w-60 h-full" src="./images/horizontal-fundo-branco-azul-marinho-500x200.svg" alt="logo"></a>
       <div id="menu" class="flex items-center gap-4 justify-end flex-1">
-        <button data-mobile="button" class="order-2 pointer px-4"><span id="hamburger"></span></button>
-        <a href="https://www.instagram.com/teamforce.global/"><img class="w-6 h-6" src="./images/instagram-header.svg" alt="instagram"></a>
-        <a href="https://api.whatsapp.com/send/?phone=5519988763687&text&type=phone_number&app_absent=0"><img class="header-color w-6 h-6" src="./images/whatsapp-header.svg" alt="whatsapp"></a>
+        <button data-mobile="button" class="order-2 pointer px-4 lg:hidden"><span id="hamburger"></span></button>
+        <a class="flex" href="https://www.instagram.com/teamforce.global/"><img class="w-6 h-6 flex-shrink-0 lg:w-8 lg:h-8" src="./images/instagram-header.svg" alt="instagram"></a>
+        <a class="flex" href="https://api.whatsapp.com/send/?phone=5519988763687&text&type=phone_number&app_absent=0"><img class="w-6 h-6 flex-shrink-0 lg:w-8 lg:h-8" src="./images/whatsapp-header.svg" alt="whatsapp"></a>
       </div>
     </div>
     <nav data-mobile="list" id="mobile-list">
-      <ul class="flex flex-col justify-center items-center text-center w-full">
+      <ul class="mobile-ul ">
         <li class="mobile-line"><a class="link" href="#flex-hire">Contratação Flexível</a></li>
         <li class="mobile-line"><a class="link" href="#training">Treinamentos</a></li>
         <li class="mobile-line"><a class="link" href="#about">Sobre a TeamForce</a></li>
@@ -30,7 +30,7 @@
     </nav>
   </header>
   <section id="home">
-    <div class="container mx-auto glass-bg py-8 px-4">
+    <div class="home-glass">
       <h1 class="text-3xl text-white font-bold mb-8 ">Imagina ter um time de tecnologia sem aumentar sua folha de pagamento?</h1>
       <p class="text-white font-medium text-lg mb-8 max-w-prose">Agora você pode! Com a Tecnologia sob Demanda, você tem acesso a um time completo de especialistas em tecnologia, prontos para atender suas necessidades, sem comprometer sua folha de pagamento.</p>
       <a class="btn-pink" href="#flex-hire">Como Assim?</a>
@@ -81,39 +81,43 @@
       <a class="btn-pink" href="#contact">Fazer um Orçamento</a>
     </div>
   </article>
-
-  <section id="training" class="px-8 py-4 mb-20 container mx-auto">
+  <section id="training" class="">
     <h2 class="text-3xl text-[#f22e7a] font-bold mb-8">Treinamentos em Salesforce</h2>
     <p class="text-lg mb-2">Implementou o CRM Salesforce e acredita que <span class="font-semibold">não esteja valendo a pena?</span></p>
     <p class="text-lg mb-2">É possível que sua equipe não esteja aproveitando o melhor desta poderosa ferramenta.</p>
     <p class="text-lg mb-10 font-bold">Contrate o melhor treinamento para seu time de vendas e escale suas vendas!</p>
-    <div class="flex flex-col gap-16">
-      <div class="border-2 border-gray-100 shadow-md py-6 px-3">
-        <div><img class="rounded-md" src="./images/trainer-explaining-software-specifics-new-employee.webp" alt="mulher explicando software para outra pessoa"></div>
+    <div class="flex flex-col gap-16 lg:flex-row">
+      <div class="training-card">
+        <div><img class="rounded-md lg:max-w-md" src="./images/trainer-explaining-software-specifics-new-employee.webp" alt="mulher explicando software para outra pessoa"></div>
         <h3 class="title-md my-6">Treinamento Padronizado</h3>
-        <p class="mb-4">Escolha entre um de nossos treinamentos padronizados para <span class="font-bold">Gestores de Vendas</span> ou <span class="font-bold">Vendedores</span> ou para melhor utilização da ferramenta como um todo.</p>
-        <p class="mb-8">Os treinamentos podem acontecer de forma presencial ou remota (consulte os locais de atendimento pelo Brasil).</p>
+        <p class="mb-4 max-w-md">Escolha entre um de nossos treinamentos padronizados para <span class="font-bold">Gestores de Vendas</span> ou <span class="font-bold">Vendedores</span> ou para melhor utilização da ferramenta como um todo.</p>
+        <p class="mb-8 max-w-md">Os treinamentos podem acontecer de forma presencial ou remota (consulte os locais de atendimento pelo Brasil).</p>
         <a class="btn-pink" href="#contact">Quero entender melhor</a>
       </div>
-      <div class="border-2 border-gray-100 shadow-md py-6 px-3">
-        <div><img class="rounded-md" src="./images/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.webp" alt="pessoas em sala de aula sorrindo para o professor que esta de costas para a camera"></div>
+      <div class="training-card">
+        <div><img class="rounded-md lg:max-w-md" src="./images/everyone-is-smiling-listens-group-people-business-conference-modern-classroom-daytime.webp" alt="pessoas em sala de aula sorrindo para o professor que esta de costas para a camera"></div>
         <h3 class="title-md my-6">Treinamento Personalizado</h3>
-        <p class="mb-4 font-semibold">Seu projeto possui particularidades?</p>
-        <p class="mb-4">Se sim, o Treinamento Personalizado é perfeito para você! Com ele, <span class="font-bold">estruturamos e direcionamos o treinamento</span> para que seu time trabalhe de forma bastante produtiva de acordo com as personalizações feitas em seu sistema.</p>
-        <p class="mb-8">Os treinamentos podem acontecer de forma presencial ou remota (consulte os locais de atendimento pelo Brasil).</p>
+        <p class="mb-4 font-semibold max-w-md">Seu projeto possui particularidades?</p>
+        <p class="mb-4 max-w-md">Se sim, o Treinamento Personalizado é perfeito para você!</p>
+        <p class="mb-4 max-w-md"> Com ele, <span class="font-bold">estruturamos e direcionamos o treinamento</span> para que seu time trabalhe de forma bastante produtiva de acordo com as personalizações feitas em seu sistema.</p>
+        <p class="mb-8 max-w-md">Os treinamentos podem acontecer de forma presencial ou remota (consulte os locais de atendimento pelo Brasil).</p>
         <a class="btn-pink" href="#contact">Quero Marcar uma aula agora!</a>
       </div>
     </div>
   </section>
-  <section id="about" class="bg-sky-100 px-6 py-16 flex flex-col gap-8">
-    <div class="max-w-md h-full"><img src="./images/young-happy-entrepreneur-having-video-call-computer-home.webp" alt="jovem empreendedor feliz em video conferencia"></div>
-    <div>
-      <h2 class="text-3xl text-sky-500 font-bold mb-8">Sobre a TeamForce</h2>
-      <p class="mb-4 text-lg">A TeamForce nasceu após analisarmos o mercado de pequenas e médias empresas, que precisam resolver problemas de tecnologia para os demais departamentos funcionarem, mas que não têm um orçamento robusto e/ou necessidade de um time de desenvolvedores internos.</p>
-      <p class="mb-4 text-lg">Nosso fundador possui mais de <span class="font-semibold">15 anos de know-how</span>, atuando diretamente com tecnologia nas mais diversas linguagens como desenvolvedor e treinador.</p>
-      <p class="mb-4 text-lg">Atualmente temos clientes no <span class="font-semibold">Brasil, EUA e México</span>, com profissionais atuando remotamente do Brasil, mesmo que não falem inglês. Assim, conseguimos dar a oportunidade de ganhar em dólar, mesmo que o profissional não seja fluente em inglês.</p>
-      <p></p>
-      <p class="mb-8 text-lg"><span class="font-semibold">Temos um propósito forte na TeamForce:</span>a cada profissional alocado em uma vaga, capacitamos uma pessoa de baixa renda para ingressar no mercado de trabalho. <a class="text-sky-600 font-semibold" href="#social">Saiba Mais!</a></p>
+  <section id="about">
+    <div class="about-wrapper">
+      <div class="md:order-2" class="max-w-sm h-full">
+        <img class="max-w-md lg:max-w-xl" src="./images/young-happy-entrepreneur-having-video-call-computer-home.webp" alt="jovem empreendedor feliz em video conferencia">
+      </div>
+      <div class="max-w-md md:max-w-2xl">
+        <h2 class="text-3xl text-sky-500 font-bold mb-8 lg:text-6xl">Sobre a TeamForce</h2>
+        <p class="mb-4 text-lg lg:text-xl lg:max-w-lg">A TeamForce nasceu após analisarmos o mercado de pequenas e médias empresas, que precisam resolver problemas de tecnologia para os demais departamentos funcionarem, mas que não têm um orçamento robusto e/ou necessidade de um time de desenvolvedores internos.</p>
+        <p class="mb-4 text-lg lg:text-xl lg:max-w-lg">Nosso fundador possui mais de <span class="font-semibold">15 anos de know-how</span>, atuando diretamente com tecnologia nas mais diversas linguagens como desenvolvedor e treinador.</p>
+        <p class="mb-4 text-lg lg:text-xl lg:max-w-lg">Atualmente temos clientes no <span class="font-semibold">Brasil, EUA e México</span>, com profissionais atuando remotamente do Brasil, mesmo que não falem inglês. Assim, conseguimos dar a oportunidade de ganhar em dólar, mesmo que o profissional não seja fluente em inglês.</p>
+        <p></p>
+        <p class="mb-8 text-lg lg:text-xl lg:max-w-lg"><span class="font-semibold">Temos um propósito forte na TeamForce:</span>a cada profissional alocado em uma vaga, capacitamos uma pessoa de baixa renda para ingressar no mercado de trabalho. <a class="text-sky-600 font-semibold" href="#social">Saiba Mais!</a></p>
+      </div>
     </div>
   </section>
   <article id="social">
@@ -129,49 +133,57 @@
       <a class="btn-sky" href="#contact">Quero Fazer parte</a>
     </div>
   </article>
-  <section id="contact" class="mt-20 py-10 px-4 bg-gray-100">
+  <section id="contact" class="mt-20 py-10 px-8 bg-gray-100">
     <h2 class="text-3xl text-center text-[#f22e7a] font-bold mb-8">Entre em Contato!</h2>
     <p class="text-3xl mb-8 text-center">Como você preferir: por e-mail, por telefone ou WhatsApp</p>
-    <dl>
-      <dt class="card mb-4 cursor-pointer">
+    <dl class="contact-dl">
+      <dt class="contact-dt">
         <h4 class="text-2xl font-medium capitalize">Solicite um atendimento:</h4>
+        <span class="accord-arrow">
+        </span>
       </dt>
-      <dd class="bg-white py-4 px-4 mb-4 ">
-        <p class="text-center mb-8">Preencha o formulário abaixo para <span class="font-semibold">receber o contato de um de nossos especialistas</span> para avaliar o seu projeto e encontrarmos, juntos, uma solução eficiente e econômica para organizar sua demanda tecnológica.</p>
-        <form class="mt-4 flex flex-col gap-4" action="">
+      <dd class="bg-white py-4 px-4 mb-4 w-full">
+        <p class="text-center mb-8 md:max-w-md lg:max-w-5xl">Preencha o formulário abaixo para <span class="font-semibold">receber o contato de um de nossos especialistas</span> para avaliar o seu projeto e encontrarmos, juntos, uma solução eficiente e econômica para organizar sua demanda tecnológica.</p>
+        <form class="mt-4 flex flex-col gap-4 lg:grid lg:grid-cols-2" action="">
           <input class="input-field" type="text" name="name" placeholder="Nome" data-form="name" id="name-form">
           <input class="input-field" type="email" name="email" id="email-form" placeholder="E-mail" data-form="email">
-          <textarea class="input-field" name="textarea" id="textarea-form" rows="5" data-form="textarea" placeholder="Insira seu telefone com DDD + Horário em que prefere receber nosso retorno"></textarea>
+          <textarea class="input-field lg:col-span-full" name="textarea" id="textarea-form" rows="5" data-form="textarea" placeholder="Insira seu telefone com DDD + Horário em que prefere receber nosso retorno"></textarea>
           <button class="btn-pink" type="submit">Solicitar Atendimento</button>
         </form>
       </dd>
-      <dt class="card mb-4 cursor-pointer">
+      <dt class="contact-dt">
         <h4 class="text-2xl font-medium capitalize">Ou Marque uma conversa Agora!</h4>
+        <span class="accord-arrow">
+        </span>
       </dt>
       <dd class="bg-white py-4 px-4 mb-4 ">
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/evelyngregorio" style="min-width:320px;height:700px;"></div>
         <!-- Calendly inline widget end -->
       </dd>
-      <dt class="card mb-4 cursor-pointer">
+      <dt class="contact-dt">
         <h4 class="text-2xl font-medium capitalize">E-mail</h4>
+        <span class="accord-arrow">
+        </span>
       </dt>
       <dd class="bg-white py-4 px-4 mb-4 ">
         <div>
           <a href="mailto:richardgregorio@gmail.com">
-            <img class="mx-auto w-48" src="./images/envelope.svg" alt="">
+            <img class="mx-auto w-24" src="./images/envelope.svg" alt="">
             <p class="text-xl text-center mb-2">Explique um pouco do seu cenário atual para iniciarmos um atendimento por e-mail e sermos efetivos na resposta.</p>
             <p class="text-xl text-sky-500 text-center font-medium">Enviar um e-mail agora</p>
           </a>
         </div>
       </dd>
-      <dt class="card mb-4 cursor-pointer">
+      <dt class="contact-dt">
         <h4 class="text-2xl font-medium capitalize">Telefone | WhatsApp</h4>
+        <span class="accord-arrow">
+        </span>
       </dt>
-      <dd class="bg-white py-4 px-4 mb-4 ">
+      <dd class="bg-white py-4 px-4 mb-4">
         <div class="flex flex-col justify-center items-center">
           <a href="https://api.whatsapp.com/send/?phone=5519988763687&text&type=phone_number&app_absent=0">
-            <img class="mx-auto w-56" src="./images/touchcell.svg" alt="">
+            <img class="mx-auto w-48" src="./images/touchcell.svg" alt="">
             <p class="text-xl text-center mb-2">Atendimento de Segunda à Sexta, das 7h às 19h
               (exceto feriados nacionais)</p>
             <p class="text-xl text-sky-500 text-center font-medium">+55 (19) 98876-3687</p>

@@ -4,7 +4,7 @@
 
 /*styles for header*/
 .header-wrapper {
-  @apply container mx-auto flex justify-between px-4 py-1 items-center;
+  @apply container mx-auto flex justify-between px-8 py-1 items-center;
 }
 
 /*control styles for menu-mobile, nav list and hamburger animation*/
@@ -68,6 +68,19 @@
 .btn-sky {
   @apply mb-6 w-max text-white uppercase font-bold py-3 px-6 rounded-md bg-sky-500 hover:bg-sky-600;
 }
+.link-text {
+  @apply block text-lg lg:text-xl text-sky-600 font-semibold w-max;
+}
+
+.link-text:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: #0284c7;
+  animation: growing-line 3s infinite;
+}
+
 /*styles for home section*/
 #home {
   @apply bg-[url('../src/images/home.webp')] bg-cover bg-center h-[720px] w-full flex justify-center items-center mb-20 md:justify-start;
@@ -79,7 +92,7 @@
 /* styles for flex-hire section */
 
 #flex-hire {
-  @apply container mx-auto flex flex-col py-4 px-6 mb-20 gap-10 justify-center items-center bg-gray-50 lg:flex-row lg:items-start lg:justify-start;
+  @apply container mx-auto flex flex-col py-4 px-8 mb-20 gap-10 justify-center items-center bg-gray-50 lg:flex-row lg:items-start lg:justify-start;
 }
 .icon-detail {
   @apply w-max py-2 px-2 rounded-full bg-sky-500 flex-shrink-0;
@@ -105,6 +118,11 @@
 }
 .training-card {
   @apply border-2 border-gray-100 shadow-md py-6 px-3 lg:max-w-lg h-max;
+  transition: 0.6s;
+  transform: scale(0.95);
+}
+.training-card:hover {
+  transform: scale(1.05);
 }
 
 /*styles for about section*/
@@ -144,4 +162,13 @@
 }
 .accord-arrow.open {
   transform: rotate(-270deg);
+}
+
+@keyframes growing-line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

@@ -4,7 +4,7 @@
 
 /*styles for header*/
 .header-wrapper {
-  @apply container mx-auto flex justify-between px-8 py-1 items-center;
+  @apply container mx-auto flex justify-between px-4 py-1 items-center xl:px-8;
 }
 
 /*control styles for menu-mobile, nav list and hamburger animation*/
@@ -26,6 +26,10 @@
   @apply w-full py-1 px-3;
 }
 
+[data-mobile="button"] {
+  text-indent: -9999999999px;
+  padding-bottom: 24px;
+}
 #hamburger {
   display: block;
   border-top: 4px solid #404040;

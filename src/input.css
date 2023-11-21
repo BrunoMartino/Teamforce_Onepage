@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 /*styles for header*/
+#navbar {
+  @apply bg-[#e9e9e9] flex justify-center relative w-screen;
+}
+
 .header-wrapper {
   @apply container mx-auto flex justify-between px-4 py-1 items-center xl:px-8;
 }
@@ -96,7 +100,10 @@
 /* styles for flex-hire section */
 
 #flex-hire {
-  @apply container mx-auto flex flex-col py-4 px-8 mb-20 gap-10 justify-center items-center bg-gray-50 lg:flex-row lg:items-start lg:justify-start;
+  @apply container mx-auto flex flex-col py-4 px-8 mb-20 gap-10 justify-center items-center bg-gray-50 lg:flex-row lg:items-start lg:justify-start opacity-0;
+}
+#flex-hire.onShow {
+  animation: show-down 1.5s forwards;
 }
 .icon-detail {
   @apply w-max py-2 px-2 rounded-full bg-sky-500 flex-shrink-0;
@@ -107,10 +114,17 @@
 .card {
   @apply flex items-center gap-3 py-4 px-4 shadow-md bg-white rounded-sm lg:max-w-6xl;
 }
+.card.onShow {
+  animation: show-right 0.8s forwards;
+}
+
 /*styles for investment article*/
 
 #investment {
-  @apply py-10 px-4 h-[600px] w-full bg-[url('../src/images/close-up-male-hands-using-laptop-home.webp')] bg-cover bg-center flex items-center justify-center mb-20;
+  @apply py-10 px-4 h-[600px] w-full bg-[url('../src/images/close-up-male-hands-using-laptop-home.webp')] bg-cover bg-center flex items-center justify-center mb-20 opacity-0;
+}
+#investment.onShow {
+  animation: show-down 1.5s forwards;
 }
 .investment-glass {
   @apply container mx-auto glass-bg py-8 px-4 rounded-md flex flex-col justify-center items-center md:max-w-4xl;
@@ -118,7 +132,10 @@
 /*styles for training section*/
 
 #training {
-  @apply px-8 py-4 mb-20 container mx-auto flex flex-col justify-center items-center;
+  @apply px-8 py-4 mb-20 container mx-auto flex flex-col justify-center items-center opacity-0;
+}
+#training.onShow {
+  animation: show-right 0.8s forwards;
 }
 .training-card {
   @apply border-2 border-gray-100 shadow-md py-6 px-3 lg:max-w-lg h-max;
@@ -132,7 +149,10 @@
 /*styles for about section*/
 
 #about {
-  @apply bg-sky-50 px-6 py-16;
+  @apply bg-sky-50 px-6 py-16 opacity-0;
+}
+#about.onShow {
+  animation: show-down 1.5s forwards;
 }
 .about-wrapper {
   @apply container mx-auto flex flex-col justify-center items-center gap-8 md:flex-row lg:items-start md:justify-around;
@@ -145,18 +165,28 @@
 }
 
 .social-glass {
-  @apply container mx-auto glass-bg-white py-8 px-4 rounded-md flex flex-col justify-start items-start md:max-w-lg md:justify-start md:mx-8 lg:mx-24;
+  @apply container mx-auto glass-bg-white py-8 px-4 rounded-md flex flex-col justify-start items-start md:max-w-lg md:justify-start md:mx-8 lg:mx-24 opacity-0;
+}
+.social-glass.onShow {
+  animation: show-right 0.8s forwards;
 }
 /*styles for contact section*/
+#contact {
+  @apply mt-20 py-10 px-8 bg-gray-100;
+}
 
 .contact-dl {
   @apply container mx-auto flex flex-col justify-start items-stretch max-w-6xl;
 }
-
 .contact-dt {
   @apply card mb-4 cursor-pointer w-full flex items-center justify-between;
 }
-
+.contact-dd {
+  @apply bg-white py-4 px-4 mb-4;
+}
+.grid-form {
+  @apply mt-4 flex flex-col gap-4 lg:grid lg:grid-cols-2;
+}
 .input-field {
   @apply border-2 border-gray-300 outline-none rounded-md text-lg py-2 px-4 focus:border-sky-400;
 }
@@ -164,7 +194,7 @@
   @apply bg-[url('../src/images/toright_arrow.svg')] bg-cover bg-center w-8 h-8 block;
   transition: 0.6s;
 }
-.accord-arrow.open {
+.contact-dt.open .accord-arrow {
   transform: rotate(-270deg);
 }
 
@@ -174,5 +204,25 @@
   }
   to {
     width: 100%;
+  }
+}
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

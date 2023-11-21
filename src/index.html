@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="bg-[#e9e9e9] flex justify-center relative">
+  <header id="navbar">
     <div class="header-wrapper">
       <a class="w-60 h-full" href="#home"><img src="./images/horizontal-fundo-branco-azul-marinho-500x200.svg" alt="logo"></a>
       <div id="menu" class="flex items-center gap-4 justify-end flex-1">
@@ -37,14 +37,14 @@
       <a class="btn-pink" href="#flex-hire">Como Assim?</a>
     </div>
   </section>
-  <section id="flex-hire">
+  <section data-anima="scroll" id="flex-hire">
     <div>
       <h2 class="text-3xl text-black font-bold capitalize mb-8">Contratação Flexível</h2>
       <p class="text-lg mb-8">Na <span class="font-bold">TeamForce</span> você tem um time inteiro para resolver o seu problema de tecnologia sem precisar aumentar sua folha de pagamento.</p>
       <a class="btn-sky" href="#contact">Solicite uma Apresentação</a>
     </div>
     <ul class="flex flex-col gap-8">
-      <li class="card">
+      <li data-anima="scroll" class="card opacity-0">
         <div class="icon-detail"><img class="w-8 h-8" src="./images/globe2.svg" alt="diagrama de um globo"></div>
         <div>
           <h3 class="title-md">Flexibilidade sob medida</h3>
@@ -52,7 +52,7 @@
           <p>Nosso consultor entenderá suas demandas e fará a distribuição dos profissionais ideais para cada parte do seu projeto, que serão pagos por hora. Assim, você alocará apenas os recursos que são realmente necessários.</p>
         </div>
       </li>
-      <li class="card">
+      <li data-anima="scroll" class="card opacity-0">
         <div class="icon-detail">
           <img class="w-8 h-8" src="./images/arrow-repeat.svg" alt="setas em ciclo">
         </div>
@@ -62,7 +62,7 @@
           <p> Pague apenas pelas horas que necessita, evitando salários altos fixos, benefícios fornecidos e encargos trabalhistas.</p>
         </div>
       </li>
-      <li class="card">
+      <li data-anima="scroll" class="card opacity-0">
         <div class="icon-detail">
           <img class="w-8 h-8" src="./images/person-circle.svg" alt="icone de pessoa">
         </div>
@@ -74,15 +74,15 @@
       </li>
     </ul>
   </section>
-  <article id="investment">
+  <article data-anima="scroll" id="investment">
     <div class="investment-glass">
-      <h2 class="text-3xl text-white font-bold mb-8">Investimento Justo!</h2>
+      <h2 class="phrase text-3xl text-white font-bold mb-8">Investimento Justo!</h2>
       <p class="mb-8 text-white font-medium text-lg max-w-4xl">Aqui, na TeamForce, entendemos que os projetos precisam ser analisados antes de precificar para um profissional ou uma equipe alocada. Dessa forma, conseguimos mensurar a complexidade de cada projeto para entender o nível de senioridade necessária de cada profissional.</p>
       <p class="mb-8 text-white font-medium text-lg max-w-4xl">Com isso, o cálculo do seu investimento será muito mais justo, pagando apenas o necessário para que tenha um profissional atendendo seu projeto de forma sustentável.</p>
       <a class="btn-pink" href="#contact">Fazer um Orçamento</a>
     </div>
   </article>
-  <section id="training" class="">
+  <section data-anima="scroll" id="training">
     <h2 class="text-3xl text-[#f22e7a] font-bold mb-8">Treinamentos em Salesforce</h2>
     <p class="text-lg mb-2">Implementou o CRM Salesforce e acredita que <span class="font-semibold">não esteja valendo a pena?</span></p>
     <p class="text-lg mb-2">É possível que sua equipe não esteja aproveitando o melhor desta poderosa ferramenta.</p>
@@ -106,7 +106,7 @@
       </div>
     </div>
   </section>
-  <section id="about">
+  <section data-anima="scroll" id="about">
     <div class="about-wrapper">
       <div class="md:order-2" class="max-w-sm h-full">
         <img class="max-w-md lg:max-w-xl" src="./images/young-happy-entrepreneur-having-video-call-computer-home.webp" alt="jovem empreendedor feliz em video conferencia">
@@ -124,7 +124,7 @@
     </div>
   </section>
   <article id="social">
-    <div class="social-glass">
+    <div data-anima="scroll" class="social-glass">
       <h2 class="text-3xl text-black font-bold mb-8">Projeto Social</h2>
       <h3 class="text-3xl text-[#f22e7a] font-bold mb-8">Construindo <br> Oportunidades</h3>
       <p class="mb-4 text-lg font-medium">A cada profissional da TeamForce que é contratado, oferecemos a capacitação preferencial de um jovem de baixa renda ou mulher que perdeu o emprego após o nascimento dos filhos, para aprender uma profissão dentro da área de tecnologia e, ainda, oferecemos uma oportunidade de trabalho remunerado para ganhar experiência e iniciar uma nova carreira.</p>
@@ -136,7 +136,7 @@
       <a class="btn-sky" href="#contact">Quero Fazer parte</a>
     </div>
   </article>
-  <section id="contact" class="mt-20 py-10 px-8 bg-gray-100">
+  <section id="contact">
     <h2 class="text-3xl text-center text-[#f22e7a] font-bold mb-8">Entre em Contato!</h2>
     <p class="text-3xl mb-8 text-center">Como você preferir: por e-mail, por telefone ou WhatsApp</p>
     <dl class="contact-dl">
@@ -145,9 +145,9 @@
         <span class="accord-arrow">
         </span>
       </dt>
-      <dd class="bg-white py-4 px-4 mb-4 w-full">
+      <dd class="contact-dd hidden">
         <p class="text-center mb-8 md:max-w-md lg:max-w-5xl">Preencha o formulário abaixo para <span class="font-semibold">receber o contato de um de nossos especialistas</span> para avaliar o seu projeto e encontrarmos, juntos, uma solução eficiente e econômica para organizar sua demanda tecnológica.</p>
-        <form class="mt-4 flex flex-col gap-4 lg:grid lg:grid-cols-2" action="">
+        <form class="grid-form" action="">
           <input class="input-field" type="text" name="name" placeholder="Nome" data-form="name" id="name-form">
           <input class="input-field" type="email" name="email" id="email-form" placeholder="E-mail" data-form="email">
           <textarea class="input-field lg:col-span-full" name="textarea" id="textarea-form" rows="5" data-form="textarea" placeholder="Insira seu telefone com DDD + Horário em que prefere receber nosso retorno"></textarea>
@@ -159,7 +159,7 @@
         <span class="accord-arrow">
         </span>
       </dt>
-      <dd class="bg-white py-4 px-4 mb-4 ">
+      <dd class="contact-dd hidden">
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/evelyngregorio" style="min-width:320px;height:700px;"></div>
         <!-- Calendly inline widget end -->
@@ -169,7 +169,7 @@
         <span class="accord-arrow">
         </span>
       </dt>
-      <dd class="bg-white py-4 px-4 mb-4 ">
+      <dd class="contact-dd hidden">
         <div>
           <a href="mailto:richardgregorio@gmail.com">
             <img class="mx-auto w-24 animate-pulse" src="./images/envelope.svg" alt="">
@@ -183,7 +183,7 @@
         <span class="accord-arrow">
         </span>
       </dt>
-      <dd class="bg-white py-4 px-4 mb-4">
+      <dd class="contact-dd hidden">
         <div class="flex flex-col justify-center items-center">
           <a href="https://api.whatsapp.com/send/?phone=5519988763687&text&type=phone_number&app_absent=0">
             <img class="mx-auto w-48 animate-pulse" src="./images/touchcell.svg" alt="">

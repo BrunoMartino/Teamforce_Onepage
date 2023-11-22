@@ -4,7 +4,7 @@
 
 /*styles for header*/
 #navbar {
-  @apply bg-[#e9e9e9] flex justify-center relative w-screen;
+  @apply bg-[#e9e9e9] flex justify-center relative w-full;
 }
 
 .header-wrapper {

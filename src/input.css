@@ -13,7 +13,7 @@
 
 /*control styles for menu-mobile, nav list and hamburger animation*/
 #mobile-list {
-  @apply container justify-center items-center w-full bg-gray-100 absolute top-24 hidden overflow-y-hidden lg:visible lg:top-8 lg:bg-transparent;
+  @apply container justify-center items-center w-full bg-gray-100 absolute top-24 hidden overflow-y-hidden lg:flex lg:top-8 lg:bg-transparent;
 }
 #mobile-list.active {
   @apply flex overflow-y-auto;
@@ -32,7 +32,6 @@
 
 [data-mobile="button"] {
   text-indent: -9999999999px;
-  padding-bottom: 24px;
 }
 #hamburger {
   display: block;

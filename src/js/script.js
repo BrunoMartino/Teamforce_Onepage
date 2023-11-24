@@ -26,12 +26,31 @@ const accordion = new Accordion(".contact-dt");
 accordion.init();
 
 window.addEventListener("scroll", () => {
+  const lang = document.getElementById("lang");
+  if (window.scrollY > 500) {
+    lang.style.position = "fixed";
+    lang.style.top = 0;
+    lang.style.zIndex = 9999;
+  } else {
+    lang.style.position = "relative";
+  }
+});
+
+window.addEventListener("scroll", () => {
   const navbar = document.getElementById("navbar");
   if (window.scrollY > 500) {
     navbar.style.position = "fixed";
-    navbar.style.top = 0;
-    navbar.style.zIndex = 9999;
+    navbar.style.top = "16px";
+    navbar.style.zIndex = 9998;
   } else {
+    navbar.style.top = 0;
     navbar.style.position = "relative";
   }
 });
+function switchToPtBr() {
+  const brBtn = document.getElementById("pt-br");
+  brBtn.addEventListener("click", () => {
+    sessionStorage.setItem("languageSwitched", "true");
+  });
+}
+switchToPtBr();

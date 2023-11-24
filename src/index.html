@@ -8,9 +8,29 @@
   <link rel="stylesheet" href="../dist/style.css">
   <link rel="shortcut icon" href="favicon.icon" type="image/x-icon">
   <title>Teamforce Global</title>
+  <script>
+    function redirectToUSPage() {
+      let userLanguage = navigator.language || navigator.userLanguage;
+      const currentURL = window.location.href;
+      const usENPagePath = '/us-en/index.html'
+      let languageSwitched = sessionStorage.getItem('languageSwitched')
+      if (!languageSwitched && userLanguage.toLowerCase() !== 'pt-br') {
+        let newURL = currentURL.replace(/\/[^\/]*$/, '') + usENPagePath
+        window.location.href = newURL;
+
+        sessionStorage.setItem('redirectionDone', 'true')
+      }
+    }
+    redirectToUSPage();
+  </script>
 </head>
 
 <body>
+  <div id="lang">
+    <a id="pt-br" href="../index.html"><img class="w-4 h-4" src="../src/images/brasil.svg" alt="pt-br"></a>
+    <span> | </span>
+    <a href="../en/index.html"><img class="w-4 h-4" src="../src/images/estados-unidos.svg" alt="us-en"></a>
+  </div>
   <header id="navbar">
     <div class="header-wrapper">
       <a class="w-60 h-full" href="#home"><img src="./images/horizontal-fundo-branco-azul-marinho-500x200.svg" alt="logo"></a>
@@ -21,7 +41,7 @@
       </div>
     </div>
     <nav data-mobile="list" id="mobile-list">
-      <ul class="mobile-ul ">
+      <ul class="mobile-ul">
         <li class="mobile-line"><a class="link" href="#flex-hire">Contratação Flexível</a></li>
         <li class="mobile-line"><a class="link" href="#training">Treinamentos</a></li>
         <li class="mobile-line"><a class="link" href="#about">Sobre a TeamForce</a></li>

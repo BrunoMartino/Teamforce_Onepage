@@ -201,6 +201,19 @@
   transform: rotate(90deg);
 }
 
+.form-sucess {
+  @apply col-span-full text-xl bg-gray-100 px-4 py-4 text-center;
+}
+.form-sucess span {
+  @apply text-green-700;
+}
+.form-error {
+  @apply col-span-full text-xl bg-gray-100 px-4 py-4 text-center;
+}
+.form-error span {
+  @apply text-red-800;
+}
+
 @keyframes growing-line {
   from {
     width: 0;

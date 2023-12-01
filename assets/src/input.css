@@ -7,11 +7,11 @@
   @apply bg-[#e9e9e9] flex items-center justify-end gap-2 px-4 pt-4 w-full;
 }
 #navbar {
-  @apply bg-[#e9e9e9] flex justify-center relative w-full;
+  @apply bg-[#e9e9e9] flex justify-center relative w-full z-20;
 }
 
 .header-wrapper {
-  @apply container mx-auto w-full flex justify-between px-4 py-1 items-center xl:px-8;
+  @apply container mx-auto w-full flex justify-between px-2 pt-6 pb-4 items-center lg:py-4 xl:px-8;
 }
 
 /*control styles for menu-mobile, nav list and hamburger animation*/
